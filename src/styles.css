@@ -1,0 +1,134 @@
+/* Add application styles & imports to this file! */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+.cdk-visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	outline: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none
+}
+
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container {
+	pointer-events: none;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%
+}
+
+.cdk-overlay-container {
+	position: fixed;
+	z-index: 1000
+}
+
+.cdk-overlay-container:empty {
+	display: none
+}
+
+.cdk-global-overlay-wrapper {
+	display: flex;
+	position: absolute;
+	z-index: 1000
+}
+
+.cdk-overlay-pane {
+	position: absolute;
+	pointer-events: auto;
+	box-sizing: border-box;
+	z-index: 1000;
+	display: flex;
+	max-width: 100%;
+	max-height: 100%
+}
+
+.cdk-overlay-backdrop {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	pointer-events: auto;
+	-webkit-tap-highlight-color: transparent;
+	transition: opacity .4s cubic-bezier(.25, .8, .25, 1);
+	opacity: 0
+}
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+	opacity: 1
+}
+
+@media screen and (-ms-high-contrast:active) {
+	.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+		opacity: .6
+	}
+}
+
+.cdk-overlay-dark-backdrop {
+	background: rgba(0, 0, 0, .32)
+}
+
+.cdk-overlay-transparent-backdrop,
+.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing {
+	opacity: 0
+}
+
+.cdk-overlay-connected-position-bounding-box {
+	position: absolute;
+	z-index: 1000;
+	display: flex;
+	flex-direction: column;
+	min-width: 1px;
+	min-height: 1px
+}
+
+.cdk-global-scrollblock {
+	position: fixed;
+	width: 100%;
+	overflow-y: scroll
+}
+
+@-webkit-keyframes cdk-text-field-autofill-start {
+	/*!*/
+}
+
+@keyframes cdk-text-field-autofill-start {
+	/*!*/
+}
+
+@-webkit-keyframes cdk-text-field-autofill-end {
+	/*!*/
+}
+
+@keyframes cdk-text-field-autofill-end {
+	/*!*/
+}
+
+.cdk-text-field-autofill-monitored:-webkit-autofill {
+	-webkit-animation-name: cdk-text-field-autofill-start;
+	animation-name: cdk-text-field-autofill-start
+}
+
+.cdk-text-field-autofill-monitored:not(:-webkit-autofill) {
+	-webkit-animation-name: cdk-text-field-autofill-end;
+	animation-name: cdk-text-field-autofill-end
+}
+
+textarea.cdk-textarea-autosize {
+	resize: none
+}
+
+textarea.cdk-textarea-autosize-measuring {
+	height: auto!important;
+	overflow: hidden!important;
+	padding: 2px 0!important;
+	box-sizing: content-box!important
+}
